@@ -1,0 +1,369 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.25in}
+\addtolength{\textheight}{0.5in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-3pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+			#1 & #2 \\
+	\end{tabular*}
+	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+			\textit{#3} & \textit{#4} \\
+	\end{tabular*}\vspace{-6pt}}
+\newcommand{\edusubheading}[3]{
+	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1}, #2 & \textit{#3} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\myitem}[1]{\item #1 \vspace{-9pt}}
+\newcommand{\mysubitem}[1]{\item #1 \vspace{-4pt}}
+%-----------------------------------------------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+% Turn on the style
+\pagestyle{fancy}
+% Clear the header and footer
+\fancyhead{}
+\fancyfoot{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+%----------PERSONAL INFORMATION----------%
+%\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+%\textbf{\large Derek Y. Qin}  & (972) 900-5736 (cell)\\
+%3745 Roundtree Way &  derekqin8@gmail.com \\
+%Plano, TX, 75025 &\\
+%\end{tabular*}
+%\\
+\begin{center}
+	\textbf{\Huge Derek Qin}\\
+	% 3745 Roundtree Way, Plano, TX, 75025\\
+	dqin@caltech.edu\\
+\end{center}
+
+\resheading{Education}
+\begin{itemize}
+
+%\item{\textbf{Test Scores}}
+%
+%	\begin{tabular}{ p{2.5in} p{2.5in} p{2.5in}}
+%		\hspace{24pt}SAT Reading: \textbf{790} & \hspace{24pt}SAT Math: \textbf{800} & \hspace{24pt}SAT Essay: 20\\
+%		\hspace{24pt}SAT Physics: \textbf{800} & \hspace{24pt}SAT Chemistry: \textbf{800} & \hspace{24pt}SAT Math 2: \textbf{800}\\
+%	\end{tabular}\vspace{-0pt}
+
+
+%\item
+%	\edusubheading{Jasper High School (9\textsuperscript{th}-10\textsuperscript{th})}{Plano, Texas}{Aug 2016 - Jun 2018}
+%		\begin{itemize}
+%			\resitem{\begin{tabular}{p{2.5in} p{2.5in}}
+%							Weighted GPA: \textbf{4.58} & Class Rank: \textbf{3/746}\\
+%						\end{tabular}}
+%			\resitem{Coursework:  \vspace{4pt}}
+%				\begin{tabular}{ p{2.5in} p{2.5in} p{2.5in} }
+%					AP Human Geography (5)& AP CS Principles (5)& AP World History (5)\\
+%				\end{tabular}\vspace{-0pt}
+%		\end{itemize}
+	
+\item
+	\edusubheading{Plano West Senior High School (10\textsuperscript{th}-12\textsuperscript{th})}{Plano, Texas}{Aug 2018 - May 2020}
+		\begin{itemize}
+			\resitem{\begin{tabular}{p{2.5in} p{2.5in}}
+							Weighted GPA: \textbf{4.69} & Class Rank: \textbf{2/1384}\\
+						\end{tabular}}
+%			\resitem{Coursework: \vspace{6pt}}
+%				\begin{tabular}{ p{2.5in} p{2.5in} p{2.5in} }
+%					AP Chemistry (5)& AP Statistics (5)& AP Chinese (5)\\
+%					AP Calculus BC (5)& AP Physics C: Mechanics (5)& AP English Language (5)\\
+%					AP Computer Science A (5)& AP Physics C: E \& M (5)& AP US History (5)
+%				\end{tabular}\vspace{-0pt}
+		\end{itemize}
+
+\item
+	\edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - Present}
+		\begin{itemize}
+			\resitem{Bachelor's Degree in Computer Science}
+		\end{itemize}
+
+\end{itemize}
+
+%--------------------------------------------
+% In case you want the tabular version of the time commitment format
+% \begin{tabular}{p{2.5in} p{2.5in} p{2.5in}}
+% 	Weeks: 18 & Hours per Week: 1 & Total hours: 18, ongoing \\
+% \end{tabular}\vspace{-6pt}
+%-------------------------------------------
+\vspace{6pt}
+
+\resheading{Experience and Activities}
+
+\begin{itemize}
+\vspace{-3pt}
+\item
+	\ressubheading{\textbf{QuizBowl}, Plano West Senior High}{Plano, Texas}{Co-Captain, Co-President}{Aug 2018 - May 2020}
+		\begin{itemize}
+			\resitem{Qualified for NAQT HSNCT in first year of pyramidal QuizBowl}
+			\resitem{Led team to National Academic Championship Finals Tournament}
+			\resitem{Increased membership from 10 to 30 and helped establish clubs at feeder schools}
+			\resitem{Organized weekly practices and team communication}
+			\resitem{Coordinated with PISD to secure support for district-wide QuizBowl tournaments}
+%			\resitem{Time Commitment: 3 hours/week, 36 weeks/year, 108 hours/year}
+		\end{itemize}
+
+%\item
+%	\ressubheading{\textbf{Intellichoice}, Jasper High School; Plano West Senior High}{Dallas, Texas}{Chapter Founder, President}{Jan 2016 - Present}
+%		\begin{itemize}
+%			\resitem{4 years of volunteer work at Ethiopian Orthodox Tewahedo Debre Mehret Saint Michael Cathedral}
+%			\resitem{Founded Jasper High School Chapter}
+%			\resitem{Recruited new members and expanded volunteer group from 2 to 15 for Ethiopian Branch}
+%			\resitem{Organized math tutoring for a pool of 100-150 students}
+%			\resitem{Time Commitment: 3 hours/week, 10 weeks/year, 30 hours/year}
+%		\end{itemize}
+
+%\item
+%	\ressubheading{\textbf{Think and Speak Up (TSUP) Summer Camp}}{Beijing, China}{Teaching Assistant}{July 2018 - Aug 2018}
+%		\begin{itemize}
+%			\resitem{Teacher of 10 student classes of young Chinese middle school students}
+%			\resitem{Taught students to combat severe stage fright and develop confidence in speech delivery}
+%			\resitem{Introduced new perspectives by merging aspects of American and Chinese education systems}
+%			\resitem{Time Commitment: 40 hours/week, 2 weeks/year, 80 hours/year}
+%		\end{itemize}
+
+%\item
+%	\ressubheading{\textbf{Junior World Affairs Council}, Plano West Senior High School}{Plano, Texas}{Junior President, President}{Aug 2018 - Present}
+%		\begin{itemize}
+%			\resitem{Organized service project supporting Plano area charities}
+%			\resitem{Led team to 3rd Place at Regional WorldQuest competition}
+%			\resitem{Time Commitment: 1 hour/week, 18 weeks/year, 18 hours/year}
+%		\end{itemize}
+
+\item
+	\ressubheading{\textbf{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President}{May 2019 - Present}
+		\begin{itemize}
+			\resitem{Helped middle and high school students develop research skills}
+			\resitem{Managed membership information and communication with over 20 science fair students}
+			\resitem{Organized meetings and created message board for announcements, discussions, and questions}
+			\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Artificial Intelligence}
+%			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
+		\end{itemize}
+
+%\item
+%	\ressubheading{\textbf{Greater Dallas Youth Orchestra}}{Dallas, Texas}{Cellist}{May 2019 - Present}
+%		\begin{itemize}
+%			\resitem{Selected for membership in the Dallas Fort-worth area's most prestigious youth orchestra}
+%			\resitem{Performed concerts at Morton H. Meyerson Symphony Center in Dallas}
+%			\resitem{Time Commitment: 5 hours/week, 34 weeks/year, 170 hours/year}
+%		\end{itemize}
+
+\item
+	\ressubheading{\textbf{AwesomeMath Summer Program}}{University of Texas at Dallas}{Student}{2015, 2016}
+		\begin{itemize}
+			\resitem{Studied Euclidean Geometry, Algebra, Advanced Combinatorics, Number Theory}
+			\resitem{Developed knowledge of Graph Theory and Set Theory, as well as traditional problem-solving skills}
+%			\resitem{Time Commitment: 45 hour/week, 3 weeks/year, 120 hours/year}
+		\end{itemize}
+
+%\item
+%	\ressubheading{\textbf{Dallas Youth Volunteer Association}}{Plano, Texas}{General Volunteer, Event Manager}{August 2018 - Present}
+%		\begin{itemize}
+%			\resitem{Organized and managed North Texas Chinese Speech competition}
+%			\resitem{Partnered with Intellichoice to provide more volunteer opportunities}
+%			\resitem{Time Commitment: 8 hour/week, 2 weeks/year, 16 hours/year}
+%		\end{itemize}
+
+%\item
+%	\ressubheading{\textbf{Plano Teen Harmony}}{Plano, Texas}{Cellist}{Aug 2015 - Present}
+%		\begin{itemize}
+%			\resitem{Performed classical and contemporary orchestra music in numerous senior homes}
+%			\resitem{Time Commitment: 5 hour/week, 4 weeks/year, 20 hours/year}
+%		\end{itemize}
+
+%\item
+%	\ressubheading{Dancing for a Cause}{Plano, Texas}{Member}{August 2017 - May 2018}
+%		\begin{itemize}
+%			\resitem{Time Commitment:}
+%				\begin{tabular}{p{2.5in} p{2.5in} p{2.5in}}
+%					Weeks: 10 & Hours per Week: 3 & Total hours: 30 \\
+%				\end{tabular}
+%			\resitem{Learned breakdancing; performed at UT Dallas charity event}
+%		\end{itemize}
+
+\end{itemize}
+
+\vspace{6pt}
+
+\resheading{Projects}
+
+\begin{itemize}
+
+\vspace{-3pt}
+
+\item
+	\ressubheading{\textbf{Traffic Signal Control Simulation for Optimization of Vehicle Flow}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
+		\begin{itemize}
+			\resitem{Developed a new algorithm that operates using car volume statistics (obtainable from Google Maps)} 
+			\resitem{Implemented with Python and identified an optimally efficient light configuration without extra cost for car-detection systems}
+			\resitem{Verified feasibility by testing configurations on both non-actuated and semi-actuated intersections}
+			\resitem{Algorithm was able to decrease wait times by upwards of 18\% compared to conventional methods}
+			\resitem{Awards:}
+				\begin{itemize}
+					\item[\textbullet] \textbf{1\textsuperscript{st} Prize} in Engineering Mechanics, Dallas Regional Science and Engineering Fair
+					\item[\textbullet] Texas State Science Fair Finalist
+					\item[\textbullet] 3\textsuperscript{rd} Prize Terracon Consultants Excellence in Engineering
+					\item[\textbullet] Office of Naval Research Special Award
+					\item[\textbullet] Air Force Research Laboratory Special Award
+				\end{itemize}\vspace{-6pt}
+		\end{itemize}
+%\vspace{12pt}
+\item
+	\ressubheading{\textbf{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
+		\begin{itemize}
+			\resitem{Created a new microscopic traffic model to simulate driver acceleration and deceleration in a jam, and derived a first-order differential equation to model the flow rate and jam dissipation time} 
+			\resitem{Implemented a bilateral control scheme and a vehicle unit structure with Python}
+			\resitem{Predicted 23\% decrease in traffic jam delays in current technological conditions}
+			\resitem{Awards:}
+				\begin{itemize}
+					\item[\textbullet] \textbf{1\textsuperscript{st} Prize} in Mathematics, Dallas Regional Science and Engineering Fair
+					\item[\textbullet] Texas State Science Fair Finalist
+					\item[\textbullet] Mu Alpha Theta Special Award
+				\end{itemize}\vspace{-6pt}
+		\end{itemize}
+
+\item
+	\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
+		\begin{itemize}
+			\resitem{Selected for Research in Science \& Engineering (RISE) Program}
+			\resitem{Analyzed self-organizing patterns on Silicon wafers in an ultra-high vacuum chamber bombarded by Argon plasma at various incidence angles}
+			\resitem{Improved multi-beam optical stress sensor (MOSS) measurements using a dual etalon configuration probing in both directions parallel and perpendicular to ion beam incidence}
+			\resitem{Developed computer vision analysis software to speed up analysis and improve precision. Analyzed sample patterns using atomic force microscopy}
+			\resitem{Publication in progress}
+			\resitem{Awards}
+				\begin{itemize}
+					\item[\textbullet] \textbf{1\textsuperscript{st} Prize} in Physics, Dallas Regional Science and Engineering Fair
+					\item[\textbullet] Texas State Science Fair Finalist
+					\item[\textbullet] Office of Naval Research Naval Science Award
+					\item[\textbullet] US Air Force Certificate of Achievement Award
+				\end{itemize}\vspace{-6pt}
+		\end{itemize}\vspace{-6pt}
+\end{itemize}
+
+\vspace{6pt}
+
+\resheading{Awards and Achievements}
+	\begin{itemize}
+	
+		%\vspace{-3pt}
+		
+		\myitem {\textbf{Special Awards}}
+			\begin{itemize}
+				\mysubitem {USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
+				\mysubitem {National Academic QuizBowl Tournaments (NAQT) Championship Tournament (2019)}
+				\mysubitem {Chinese Institute of Engineers (CIE) Young Achiever Award (2019)}
+				\mysubitem {Duke TIP William and Dorothy C. Bevan Scholarship (2014)}
+				\mysubitem {National AP Scholar, AP Scholar with Distinction (2019)}
+			\end{itemize} \vspace{-9pt}
+			
+		\myitem {\textbf{Mathematics Awards}}
+			\begin{itemize}
+				\mysubitem {Harvard-MIT Mathematics Tournament, Team Round, 10\textsuperscript{th} Place (2018)}
+				\mysubitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
+				\mysubitem {8x American Mathematics Competition (AMC 10) Distinguished Honor Roll (2014-2018)}
+			\end{itemize} \vspace{-9pt}
+			
+%		\myitem {\textbf{Music and Arts Awards}}
+%			\begin{itemize}
+%				\mysubitem {All-Region Symphony Orchestra Member (3\textsuperscript{rd} Chair out of 106 candidates) (2019)}
+%				\mysubitem {All-Region Orchestra Member (2016, 2018)}
+%				\mysubitem {Texas Music Educators Association (TMEA) Honor Orchestra Member (2019)}
+%				\mysubitem {Greater Dallas Youth Orchestra (GDYO) Member (2019-2020)}
+%				\mysubitem {Regional Visual Arts Scholastic Event (VASE) Excellent Award (2017)}
+%				\mysubitem {4x Exemplary Soloist (2015, 2016, 2017, 2018)}
+%			\end{itemize} \vspace{-9pt}
+
+		\myitem {\textbf{Research Awards}}
+			\begin{itemize}
+				\mysubitem {Multiple Awards, See Projects Section}
+			\end{itemize} \vspace{-3pt}
+			
+	\end{itemize}
+
+\resheading{Skills}
+	\begin{itemize}
+		%\vspace{-3pt}
+		\myitem {\textbf{Languages}}
+			\begin{itemize}
+				\mysubitem {Fluent in English and Mandarin Chinese}
+			\end{itemize} \vspace{-9pt}
+		\myitem {\textbf{Programming Languages}}
+			\begin{itemize}
+				\mysubitem {C/C++ , Java, Python, HTML, CSS, Matlab, Octave}
+			\end{itemize} \vspace{-9pt}
+		\myitem {\textbf{Software}}
+			\begin{itemize}
+				\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
+			\end{itemize} \vspace{-9pt}
+		\myitem {\textbf{Miscellaneous}}
+			\begin{itemize}
+				\mysubitem {This resume was created with \LaTeX}
+			\end{itemize} \vspace{-9pt}
+	\end{itemize}
+
+\vspace{-6pt}
+
+
+
+%\resheading{Open Source Projects}
+%
+%\begin{description}
+%\item[2007--2008] One of four upstream maintainers of the SELinux tool chain.
+%\item[2001--Present] Major contributor to ISC cron (formerly Vixie cron).
+%\item[1996--Present] Core member of the OpenBSD operating system project.  Participated in multiple security audits of the OpenBSD code base.  Responsible for the OpenBSD C library and large portions of the OpenBSD user space.
+%\item[1993--Present] Lead developer of the \emph{Sudo} root privilege control package.
+%\item[1993--Present] Contributor to other various and sundry Open Source projects.
+%\end{description}
+%
+%\resheading{Publications}
+%
+%\begin{description}
+%\item["Security-Enhanced Darwin: Porting SELinux to Mac OS X",]
+%\emph{Proceedings from the Third Annual Security Enhanced Linux Symposium} in Baltimore, MD, 2007.
+%\item["{\sc \bf UNIX} System Administration Handbook, Third Edition",]
+%contributing author.
+%\item["strlcpy and strlcat:  Consistent, Safe, String Copy and Concatenation",]
+%\emph{Proceedings from the USENIX Annual Technical Conference} in Monterey, CA, 1999.
+%\item["satool:  A System Administrators Cockpit",]
+%\emph{Proceedings from the USENIX LISA VII Conference (Large Installation Systems Administration)} in Monterey, CA, 1993.
+%\end{description}
+%
+%\resheading{Patents}
+%
+%\begin{description}
+%\item[Furlong, Wesley J., Schlossnagle, George, Miller, Todd.  2014.]
+%Method and system for adaptive delivery of digital messages.
+%U.S. Patent 8,782,184 filed September 20, 2013, and issued July 15, 2014.
+%\end{description}
+
+\end{document}
