@@ -8,10 +8,14 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-%-----------------------------------------------------------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
 \usepackage[empty]{fullpage}
 \usepackage{color}
-\definecolor{mygrey}{gray}{0.80}
+%-----------------------------------------------------------
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -30,26 +34,30 @@
 \newcommand{\ressubheading}[4]{
 	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
 			#1 & #2 \\
-	\end{tabular*}
-	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-			\textit{#3} & \textit{#4} \\
-	\end{tabular*}\vspace{-6pt}}
+			\textit{#3} & \textit{#4}
+	\end{tabular*}\vspace{-6pt}
+	% \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+	% 		\textit{#3} & \textit{#4} \\
+	% \end{tabular*}\vspace{-6pt}
+}
 \newcommand{\edusubheading}[3]{
 	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#3} \\
 \end{tabular*}\vspace{-6pt}}
 \newcommand{\myitem}[1]{\item #1 \vspace{-9pt}}
 \newcommand{\mysubitem}[1]{\item #1 \vspace{-4pt}}
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 %-----------------------------------------------------------
-\usepackage{fancyhdr}
-\usepackage{lastpage}
 % Turn on the style
 \pagestyle{fancy}
 % Clear the header and footer
 \fancyhead{}
 \fancyfoot{}
 % Set the right side of the footer to be the page number
-\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+%\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+\definecolor{mygrey}{gray}{0.80}
 \renewcommand{\headrulewidth}{0pt}
 \begin{document}
 %----------PERSONAL INFORMATION----------%
@@ -60,13 +68,13 @@
 %\end{tabular*}
 %\\
 \begin{center}
-	\textbf{\Huge Derek Qin}\\
+	\textbf{\huge Derek Qin}\\
 	% 3745 Roundtree Way, Plano, TX, 75025\\
 	dqin@caltech.edu\\
 \end{center}
 
-\resheading{Education}
-\begin{itemize}
+\section{Education}
+\begin{itemize}[leftmargin=*]
 
 %\item{\textbf{Test Scores}}
 %
@@ -106,9 +114,25 @@
 	\edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - Present}
 		\begin{itemize}
 			\resitem{Bachelor of Science: Computer Science (Machine Learning \& Robotics)}
+			\resitem{\textbf{Selected Coursework:} \textbf{Passed Placements:} Ma 1c (Multivariable Calculus), Ma 2 (Differential Equations), Ph 1a (Classical Mechanics); \textbf{CS:} CS 21 (Decidability and Tractability), CS 38 (Algorithms); \textbf{Math:} Ma 6a (Discrete Math), Ma 1b (Linear Algebra, Analytical)}
 		\end{itemize}
-
 \end{itemize}
+
+% \section{Selected Coursework}
+% 	\begin{itemize}
+% 		\myitem{\textbf{Passed Placements:}}
+% 			\begin{itemize}
+% 				\mysubitem{CS 1 (Intro to Programming), Ma 1c (Multivariable Calculus), Ma 2 (Differential Equations), Ph 1a (Classical Mechanics)}
+% 			\end{itemize}
+% 		\myitem{\textbf{CS:}}
+% 			\begin{itemize}
+% 				\mysubitem {CS 21 (Complexity Theory), CS 38 (Algorithms)}
+% 			\end{itemize}
+% 		\myitem{\textbf{Math:}}
+% 			\begin{itemize}
+% 				\mysubitem {Ma 6a (Discrete Math), Ma 2 (Differential Equations)}
+% 			\end{itemize}
+% 	\end{itemize}
 
 %--------------------------------------------
 % In case you want the tabular version of the time commitment format
@@ -116,77 +140,45 @@
 % 	Weeks: 18 & Hours per Week: 1 & Total hours: 18, ongoing \\
 % \end{tabular}\vspace{-6pt}
 %-------------------------------------------
-\vspace{6pt}
 
-\resheading{Projects}
+\section{Projects}
 
-\begin{itemize}
+\begin{itemize}[leftmargin=*]
 
-\vspace{-3pt}
+	\item
+		\ressubheading{\textbf{Traffic Signal Control Simulation for Optimization of Vehicle Flow}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
+			\begin{itemize}[leftmargin=*]
+				\resitem{Developed a novel signal management algorithm using car volume statistics using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
+				\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering Mechanics, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants Excellence in Engineering; ONR Special Award; AFRL Special Award}
+			\end{itemize}
+	%\vspace{12pt}
+	\item
+		\ressubheading{\textbf{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
+			\begin{itemize}
+				\resitem{Created a novel microscopic traffic model and derived a first-order differential equation to model flow rate and jam dissipation for bilateral and vehicle unit control.}
+				\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
+			\end{itemize}
 
-\item
-	\ressubheading{\textbf{Traffic Signal Control Simulation for Optimization of Vehicle Flow}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
-		\begin{itemize}
-			\resitem{Developed a novel signal management algorithm that operates using car volume statistics} 
-			\resitem{Implemented with Python and Google Maps API to identify an optimally efficient light configuration without extra cost for car-detection systems}
-			\resitem{Verified feasibility by testing configurations on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
-			\resitem{Awards:}
-				\begin{itemize}
-					\item[\textbullet] \textbf{1\textsuperscript{st} Prize} in Engineering Mechanics, Dallas Regional Science and Engineering Fair
-					\item[\textbullet] Texas State Science Fair Finalist
-					\item[\textbullet] 3\textsuperscript{rd} Prize Terracon Consultants Excellence in Engineering
-					\item[\textbullet] Office of Naval Research Special Award
-					\item[\textbullet] Air Force Research Laboratory Special Award
-				\end{itemize}\vspace{-6pt}
-		\end{itemize}
-%\vspace{12pt}
-\item
-	\ressubheading{\textbf{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
-		\begin{itemize}
-			\resitem{Created a novel microscopic traffic model and derived a first-order differential equation to model flow rate and jam dissipation} 
-			\resitem{Implemented bilateral control scheme and a vehicle unit structure with Python for vehicle control}
-			\resitem{Awards:}
-				\begin{itemize}
-					\item[\textbullet] \textbf{1\textsuperscript{st} Prize} in Mathematics, Dallas Regional Science and Engineering Fair
-					\item[\textbullet] Texas State Science Fair Finalist
-					\item[\textbullet] Mu Alpha Theta Special Award
-				\end{itemize}\vspace{-6pt}
-		\end{itemize}
+	\item
+		\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
+			\begin{itemize}
+				\resitem{Selected for Research in Science \& Engineering (RISE) Program}
+				\resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
+				\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision}
+				\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
+				\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
+			\end{itemize}\vspace{-6pt}
+	\end{itemize}
 
-\item
-	\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
-		\begin{itemize}
-			\resitem{Selected for Research in Science \& Engineering (RISE) Program}
-			\resitem{Analyzed self-organizing patterns on Silicon in ultra-high vacuum bombarded by Argon plasma at various incidence angles}
-			\resitem{Added dimensionality to multi-beam optical stress sensor (MOSS) measurements using a dual etalon configuration probing both parallel and perpendicular to ion beam incidence}
-			\resitem{Developed computer vision analysis software using Scikit-learn to speed up analysis and improve precision. Analyzed sample patterns using atomic force microscopy}
-			\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
-			\resitem{Awards}
-				\begin{itemize}
-					\item[\textbullet] \textbf{1\textsuperscript{st} Prize} in Physics, Dallas Regional Science and Engineering Fair
-					\item[\textbullet] Texas State Science Fair Finalist
-					\item[\textbullet] Office of Naval Research Naval Science Award
-					\item[\textbullet] US Air Force Certificate of Achievement Award
-				\end{itemize}\vspace{-6pt}
-		\end{itemize}\vspace{-6pt}
-\end{itemize}
+\section{Experience and Activities}
 
-\vspace{6pt}
-
-\resheading{Experience and Activities}
-
-\begin{itemize}
-\vspace{-3pt}
-\item
-	\ressubheading{\textbf{QuizBowl}, Plano West Senior High}{Plano, Texas}{Co-Captain, Co-President}{Aug 2018 - May 2020}
-		\begin{itemize}
-			\resitem{Qualified for NAQT HSNCT in first year of pyramidal QuizBowl}
-			\resitem{Led team to National Academic Championship Finals Tournament}
-			\resitem{Increased membership from 10 to 30 and helped establish clubs at feeder schools}
-			\resitem{Organized weekly practices and team communication}
-			\resitem{Coordinated with PISD to secure support for district-wide QuizBowl tournaments}
-%			\resitem{Time Commitment: 3 hours/week, 36 weeks/year, 108 hours/year}
-		\end{itemize}
+\begin{itemize}[leftmargin=*]
+	\item
+		\ressubheading{\textbf{QuizBowl}, Plano West Senior High}{Plano, Texas}{Co-Captain, Co-President}{Aug 2018 - May 2020}
+			\begin{itemize}
+				\resitem{Led team to NAQT HSNCT and NAC Championship Finals in first year of QuizBowl}
+	%			\resitem{Time Commitment: 3 hours/week, 36 weeks/year, 108 hours/year}
+			\end{itemize}
 
 %\item
 %	\ressubheading{\textbf{Intellichoice}, Jasper High School; Plano West Senior High}{Dallas, Texas}{Chapter Founder, President}{Jan 2016 - Present}
@@ -215,15 +207,13 @@
 %			\resitem{Time Commitment: 1 hour/week, 18 weeks/year, 18 hours/year}
 %		\end{itemize}
 
-\item
-	\ressubheading{\textbf{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President, Co-founder}{May 2019 - September 2020}
-		\begin{itemize}
-			\resitem{Helped middle and high school students develop research skills}
-			\resitem{Managed membership information and communication with over 200 science fair students}
-			\resitem{Organized meetings and created message board for announcements, discussions, and questions}
-			\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Artificial Intelligence}
-%			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
-		\end{itemize}
+	\item
+		\ressubheading{\textbf{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President, Co-founder}{May 2019 - September 2020}
+			\begin{itemize}
+				\resitem{Managed membership information and communication with over 200 science fair students}
+				\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Artificial Intelligence}
+	%			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
+			\end{itemize}
 
 %\item
 %	\ressubheading{\textbf{Greater Dallas Youth Orchestra}}{Dallas, Texas}{Cellist}{May 2019 - Present}
@@ -233,12 +223,12 @@
 %			\resitem{Time Commitment: 5 hours/week, 34 weeks/year, 170 hours/year}
 %		\end{itemize}
 
-\item
-	\ressubheading{\textbf{AwesomeMath Summer Program}}{University of Texas at Dallas}{Student}{2015, 2016}
-		\begin{itemize}
-			\resitem{Studied Advanced Graph Theory, Combinatorial Geometry, Posets, Analysis}
-%			\resitem{Time Commitment: 45 hour/week, 3 weeks/year, 120 hours/year}
-		\end{itemize}
+	% \item
+	% 	\ressubheading{\textbf{AwesomeMath Summer Program}}{University of Texas at Dallas}{Student}{2015, 2016}
+	% 		\begin{itemize}
+	% 			\resitem{Studied Advanced Graph Theory, Combinatorial Geometry, Posets, Analysis}
+	% %			\resitem{Time Commitment: 45 hour/week, 3 weeks/year, 120 hours/year}
+	% 		\end{itemize}
 
 %\item
 %	\ressubheading{\textbf{Dallas Youth Volunteer Association}}{Plano, Texas}{General Volunteer, Event Manager}{August 2018 - Present}
@@ -267,28 +257,26 @@
 
 \end{itemize}
 
-\vspace{6pt}
-
-\resheading{Awards and Achievements}
-	\begin{itemize}
-	
-		%\vspace{-3pt}
-		
-		\myitem {\textbf{Special Awards}}
-			\begin{itemize}
-				\mysubitem {USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
-				\mysubitem {National Academic QuizBowl Tournaments (NAQT) Championship Tournament (2019)}
-				\mysubitem {Chinese Institute of Engineers (CIE) Young Achiever Award (2019)}
-				\mysubitem {Duke TIP William and Dorothy C. Bevan Scholarship (2014)}
-				\mysubitem {National AP Scholar, AP Scholar with Distinction (2019)}
-			\end{itemize} \vspace{-9pt}
+\section{Awards and Achievements}
+	\begin{itemize}[leftmargin=*]
+		\myitem{USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
+		\myitem {Harvard-MIT Mathematics Tournament, Team Round, 10\textsuperscript{th} Place (2018)}
+		\myitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
+		% \myitem {\textbf{Special Awards}}
+		% 	\begin{itemize}
+		% 		\mysubitem {USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
+		% 		% \mysubitem {National Academic QuizBowl Tournaments (NAQT) Championship Tournament (2019)}
+		% 		\mysubitem {Chinese Institute of Engineers (CIE) Young Achiever Award (2019)}
+		% 		% \mysubitem {Duke TIP William and Dorothy C. Bevan Scholarship (2014)}
+		% 		% \mysubitem {National AP Scholar, AP Scholar with Distinction (2019)}
+		% 	\end{itemize} \vspace{-9pt}
 			
-		\myitem {\textbf{Mathematics Awards}}
-			\begin{itemize}
-				\mysubitem {Harvard-MIT Mathematics Tournament, Team Round, 10\textsuperscript{th} Place (2018)}
-				\mysubitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
-				\mysubitem {8x American Mathematics Competition (AMC 10) Distinguished Honor Roll (2014-2018)}
-			\end{itemize} \vspace{-9pt}
+		% \myitem {\textbf{Mathematics Awards}}
+		% 	\begin{itemize}
+		% 		\mysubitem {Harvard-MIT Mathematics Tournament, Team Round, 10\textsuperscript{th} Place (2018)}
+		% 		\mysubitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
+		% 		% \mysubitem {8x American Mathematics Competition (AMC 10) Distinguished Honor Roll (2014-2018)}
+		% 	\end{itemize} \vspace{-9pt}
 			
 %		\myitem {\textbf{Music and Arts Awards}}
 %			\begin{itemize}
@@ -300,55 +288,26 @@
 %				\mysubitem {4x Exemplary Soloist (2015, 2016, 2017, 2018)}
 %			\end{itemize} \vspace{-9pt}
 
-		\myitem {\textbf{Research Awards}}
-			\begin{itemize}
-				\mysubitem {Multiple Awards, See Projects Section}
-			\end{itemize} \vspace{-3pt}
-			
+		\myitem {\textbf{Research Awards:} See Projects Section}
 	\end{itemize}
+\vspace{2pt}
 
-\resheading{Selected Coursework}
-	\begin{itemize}
-		\myitem{\textbf{Passed Placements:}}
-			\begin{itemize}
-				\mysubitem{CS 1 (Intro to Programming), Ma 1c (Multivariable Calculus), Ma 2 (Differential Equations), Ph 1a (Classical Mechanics)}
-			\end{itemize}
-		\myitem{\textbf{CS:}}
-			\begin{itemize}
-				\mysubitem {CS 21 (Complexity Theory), CS 38 (Algorithms)}
-			\end{itemize}
-		\myitem{\textbf{Math:}}
-			\begin{itemize}
-				\mysubitem {Ma 6a (Discrete Math), Ma 2 (Differential Equations)}
-			\end{itemize}
-	\end{itemize}
-\resheading{Skills}
-	\begin{itemize}
-		%\vspace{-3pt}
-		\myitem {\textbf{Languages}}
-			\begin{itemize}
-				\mysubitem {Fluent in English and Mandarin Chinese}
-			\end{itemize} \vspace{-9pt}
+\section{Skills}
+	\begin{itemize}[leftmargin=*]
+		\myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
 		\myitem {\textbf{Programming Languages}}
 			\begin{itemize}
-				\mysubitem {C/C++ , Java, Python, HTML, CSS, Matlab, Octave}
+				\mysubitem {C/C++ , Java, Python, HTML/CSS, \LaTeX, Matlab, Octave}
 				\mysubitem {Tensorflow, Keras, Scikit-learn, NumPy}
-			\end{itemize} \vspace{-9pt}
-		\myitem {\textbf{Software}}
-			\begin{itemize}
-				\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
-			\end{itemize} \vspace{-9pt}
-		\myitem {\textbf{Miscellaneous}}
-			\begin{itemize}
-				\mysubitem {This resume was created with \LaTeX}
-			\end{itemize} \vspace{-9pt}
+			\end{itemize}
+		% \myitem {\textbf{Software}}
+		% 	\begin{itemize}
+		% 		\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
 	\end{itemize}
 
-\vspace{-6pt}
 
 
-
-%\resheading{Open Source Projects}
+%\section{Open Source Projects}
 %
 %\begin{description}
 %\item[2007--2008] One of four upstream maintainers of the SELinux tool chain.
@@ -358,7 +317,7 @@
 %\item[1993--Present] Contributor to other various and sundry Open Source projects.
 %\end{description}
 %
-%\resheading{Publications}
+%\section{Publications}
 %
 %\begin{description}
 %\item["Security-Enhanced Darwin: Porting SELinux to Mac OS X",]
@@ -371,7 +330,7 @@
 %\emph{Proceedings from the USENIX LISA VII Conference (Large Installation Systems Administration)} in Monterey, CA, 1993.
 %\end{description}
 %
-%\resheading{Patents}
+%\section{Patents}
 %
 %\begin{description}
 %\item[Furlong, Wesley J., Schlossnagle, George, Miller, Todd.  2014.]
