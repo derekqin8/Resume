@@ -33,7 +33,7 @@
 \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
 	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-			#1 & #2 \\
+			\textbf{#1} & #2 \\
 			\textit{#3} & \textit{#4}
 	\end{tabular*}\vspace{-6pt}
 	% \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
@@ -44,7 +44,7 @@
 	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#3} \\
 \end{tabular*}\vspace{-6pt}}
-\newcommand{\myitem}[1]{\item #1 \vspace{-9pt}}
+\newcommand{\myitem}[1]{\item #1 \vspace{-8pt}}
 \newcommand{\mysubitem}[1]{\item #1 \vspace{-4pt}}
 \titleformat{\section}{
   \vspace{-10pt}\scshape\raggedright\Large
@@ -74,7 +74,8 @@
 \end{center}
 
 \section{Education}
-\begin{itemize}[leftmargin=*]
+
+% \begin{itemize}[leftmargin=*]
 
 %\item{\textbf{Test Scores}}
 %
@@ -110,13 +111,14 @@
 % %				\end{tabular}\vspace{-0pt}
 % 		\end{itemize}
 
-\item
+% \item
 	\edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - Present}
 		\begin{itemize}
-			\resitem{Bachelor of Science: Computer Science (Machine Learning \& Robotics)}
-			\resitem{\textbf{Selected Coursework:} \textbf{Passed Placements:} Ma 1c (Multivariable Calculus), Ma 2 (Differential Equations), Ph 1a (Classical Mechanics); \textbf{CS:} CS 2 (Data Structures), CS 3 (Software Development), CS 21 (Decidability and Tractability), CS 38 (Algorithms); \textbf{Math:} Ma 6a (Discrete Math), Ma 1b (Linear Algebra, Analytical)}
+			\myitem{B.S. Major: Computer Science (ML \& Robotics), Minor: Information and Data Sciences; \textbf{GPA:} 4.0}
+			\myitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Machine Learning, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra (Analytical), Statistics}
 		\end{itemize}
-\end{itemize}
+
+% \end{itemize}
 
 % \section{Selected Coursework}
 % 	\begin{itemize}
@@ -141,44 +143,74 @@
 % \end{tabular}\vspace{-6pt}
 %-------------------------------------------
 
+\vspace{0pt}
+
 \section{Experience}
 
 \begin{itemize}[leftmargin=*]
 	\item 
-		\ressubheading{\textbf{Boston University Materials X-Ray Diffraction Lab}}{Boston, MA}{Researcher}{June 2019 - February 2020}
+		\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Researcher}{February 2021 - Present}
 			\begin{itemize}[leftmargin=*]
-				\resitem{Selected for Research in Science \& Engineering (RISE) Program}
-				\resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
-				\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision}
-				\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
-				\resitem{\textbf{Research Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
-			\end{itemize}
-		
-	\item 
-		\ressubheading{\textbf{Caltech Tensor Lab}}{Pasadena, CA}{Researcher}{February 2021 - Present}
-			\begin{itemize}[leftmargin=*]
-				\resitem{Research conducted under Caltech SURF}
-				\resitem{Designed and tested novel neural network architecture to improve performance of Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions}
+				% \resitem{Research conducted under Caltech SURF}
+				\resitem{Designed FC-based neural network to improve performance of Fourier Neural Operators on PDEs with nonperiodic boundary conditions}
 				\resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
 			\end{itemize}
+
+	\item 
+		\ressubheading{Boston University Ludwig Lab}{Boston, MA}{Researcher}{June 2019 - February 2020}
+			\begin{itemize}[leftmargin=*]
+				% \resitem{Selected for Research in Science \& Engineering (RISE) Program}
+				% \resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
+				\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision}
+				\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
+				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
+			\end{itemize}
+		
 \end{itemize}
+
+% \vspace{0pt}
+
+\section{Skills}
+
+\begin{itemize}[leftmargin=*]
+	\myitem {\textbf{Programming Languages:} C/C++, Java, JavaScript, Python, SQL, MATLAB, HTML/CSS, \LaTeX}
+	\myitem {\textbf{Tools:} PyTorch, TensorFlow, Keras, scikit-learn, Numpy, pandas, Git, FEniCS}
+	\myitem{\textbf{Frameworks:} React, Django}
+	\myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
+	% \myitem {\textbf{Software}}
+	% 	\begin{itemize}
+	% 		\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
+\end{itemize}
+
+\vspace{0pt}
 
 \section{Projects}
 
 \begin{itemize}[leftmargin=*]
-
-	\item
-		\ressubheading{\textbf{Traffic Signal Control Simulation for Optimization of Vehicle Flow}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
+	\item 
+		\ressubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}{Full-Stack Development}{June 2021 - Present}
 			\begin{itemize}[leftmargin=*]
-				\resitem{Developed a novel signal management algorithm using car volume statistics using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
-				\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering Mechanics, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants Excellence in Engineering; ONR Special Award; AFRL Special Award}
+				\resitem{Web application for interpreting and analyzing personal Facebook data.}
 			\end{itemize}
-	%\vspace{12pt}
-	\item
-		\ressubheading{\textbf{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}}{Plano, Texas}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
+	
+	\item 
+		\ressubheading{Turtle Run Game}{C, SDL}{Software Development}{February 2021 - June 2021}
 			\begin{itemize}[leftmargin=*]
-				\resitem{Created a novel microscopic traffic model and derived a first-order differential equation to model flow rate and jam dissipation for bilateral and vehicle unit control.}
-				\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
+				\item Developed physics engine and 2D side scrolling game with full GUI.
+			\end{itemize}
+	\item
+		\ressubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}{Python}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
+			\begin{itemize}[leftmargin=*]
+				\resitem{Created a differential microscopic traffic model to model flow rate and jam dissipation for bilateral and vehicle unit control.}
+				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
+			\end{itemize}
+	
+	\item
+		\ressubheading{Traffic Signal Control Simulation for Optimization of Vehicle Flow}{Python, Google Maps API}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
+			\begin{itemize}[leftmargin=*]
+				% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
+				\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time.}
+				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
 			\end{itemize}
 
 	% \item
@@ -322,18 +354,8 @@
 	%				\mysubitem {4x Exemplary Soloist (2015, 2016, 2017, 2018)}
 	%			\end{itemize} \vspace{-9pt}
 
-	\myitem {\textbf{Research Awards:} See Projects Section}
+	% \myitem {\textbf{Research Awards:} See Projects Section}
 \end{itemize}
-\vspace{2pt}
 
-\section{Skills}
-	\begin{itemize}[leftmargin=*]
-		\myitem {\textbf{Programming Languages:} C/C++, Java, Javascript, Python, HTML/CSS, \LaTeX, MATLAB}
-		\myitem {\textbf{Tools:} PyTorch, Tensorflow, Keras, Scikit-learn, NumPy, Pandas}
-		\myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
-		% \myitem {\textbf{Software}}
-		% 	\begin{itemize}
-		% 		\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
-	\end{itemize}
 
 \end{document}
