@@ -29,26 +29,26 @@
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-3pt}}
+\newcommand{\resitem}[1]{\item[--] #1 \vspace{-8pt}}
 \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
-	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+	\vspace{6pt}
+	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 			\textbf{#1} & #2 \\
 			\textit{#3} & \textit{#4}
-	\end{tabular*}\vspace{-6pt}
-	% \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-	% 		\textit{#3} & \textit{#4} \\
-	% \end{tabular*}\vspace{-6pt}
+	\end{tabular*}
+	\vspace{-12pt}
 }
 \newcommand{\edusubheading}[3]{
-	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#3} \\
-\end{tabular*}\vspace{-6pt}}
-\newcommand{\myitem}[1]{\item #1 \vspace{-8pt}}
+	\end{tabular*}
+	\vspace{-16pt}}
+\newcommand{\myitem}[1]{\item[--] #1 \vspace{-8pt}}
 \newcommand{\mysubitem}[1]{\item #1 \vspace{-4pt}}
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\Large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-8pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
 %-----------------------------------------------------------
 % Turn on the style
 \pagestyle{fancy}
@@ -70,7 +70,7 @@
 \begin{center}
 	\textbf{\huge Derek Qin}\\
 	% 3745 Roundtree Way, Plano, TX, 75025\\
-	dqin@caltech.edu\\
+	dqin@caltech.edu $|$ Phone: (972) 900-5736 $|$ Linkedin: in/dqin $|$ GitHub: derekqin8\\
 \end{center}
 
 \section{Education}
@@ -85,7 +85,6 @@
 %	\end{tabular}\vspace{-0pt}
 
 
-%\item
 %	\edusubheading{Jasper High School (9\textsuperscript{th}-10\textsuperscript{th})}{Plano, Texas}{Aug 2016 - Jun 2018}
 %		\begin{itemize}
 %			\resitem{\begin{tabular}{p{2.5in} p{2.5in}}
@@ -97,7 +96,6 @@
 %				\end{tabular}\vspace{-0pt}
 %		\end{itemize}
 	
-% \item
 % 	\edusubheading{Plano West Senior High School (10\textsuperscript{th}-12\textsuperscript{th})}{Plano, Texas}{Aug 2018 - May 2020}
 % 		\begin{itemize}
 % 			\resitem{\begin{tabular}{p{2.5in} p{2.5in}}
@@ -111,14 +109,11 @@
 % %				\end{tabular}\vspace{-0pt}
 % 		\end{itemize}
 
-% \item
-	\edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - Present}
-		\begin{itemize}
-			\myitem{B.S. Major: Computer Science (ML \& Robotics), Minor: Information and Data Sciences; \textbf{GPA:} 4.0}
-			\myitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Machine Learning, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra (Analytical), Statistics}
-		\end{itemize}
-
-% \end{itemize}
+\edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - June 2024 (Anticipated)}
+	\begin{itemize}[leftmargin=*]
+		\resitem{B.S. Major: Computer Science, Minor: Information and Data Sciences; \textbf{GPA:} 4.0}
+		\resitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Machine Learning, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra, Statistics}
+	\end{itemize}
 
 % \section{Selected Coursework}
 % 	\begin{itemize}
@@ -143,77 +138,67 @@
 % \end{tabular}\vspace{-6pt}
 %-------------------------------------------
 
-\vspace{0pt}
-
-\section{Experience}
-
-\begin{itemize}[leftmargin=*]
-	\item 
-		\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Researcher}{February 2021 - Present}
-			\begin{itemize}[leftmargin=*]
-				% \resitem{Research conducted under Caltech SURF}
-				\resitem{Designed FC-based neural network to improve performance of Fourier Neural Operators on PDEs with nonperiodic boundary conditions}
-				\resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
-			\end{itemize}
-
-	\item 
-		\ressubheading{Boston University Ludwig Lab}{Boston, MA}{Researcher}{June 2019 - February 2020}
-			\begin{itemize}[leftmargin=*]
-				% \resitem{Selected for Research in Science \& Engineering (RISE) Program}
-				% \resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
-				\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision}
-				\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
-				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
-			\end{itemize}
-		
-\end{itemize}
-
 % \vspace{0pt}
 
 \section{Skills}
 
 \begin{itemize}[leftmargin=*]
-	\myitem {\textbf{Programming Languages:} C/C++, Java, JavaScript, Python, SQL, MATLAB, HTML/CSS, \LaTeX}
-	\myitem {\textbf{Tools:} PyTorch, TensorFlow, Keras, scikit-learn, Numpy, pandas, Git, FEniCS}
-	\myitem{\textbf{Frameworks:} React, Django}
-	\myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
+	\resitem {\textbf{Programming Languages:} C, C++, Java, JavaScript, Python, SQL (intro), MATLAB, HTML/CSS, \LaTeX}
+	\resitem {\textbf{Tools:} PyTorch, TensorFlow, Keras, scikit-learn, Numpy, pandas, Git, FEniCS}
+	\resitem{\textbf{Frameworks:} React (intro), Django}
+	% \myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
 	% \myitem {\textbf{Software}}
 	% 	\begin{itemize}
 	% 		\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
 \end{itemize}
 
-\vspace{0pt}
+% \vspace{0pt}
+
+\section{Experience}
+
+	\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Researcher}{Winter 2021 - Present}
+		\begin{itemize}[leftmargin=*]
+			% \resitem{Research conducted under Caltech SURF}
+			\resitem{Improved Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions by up to 15\% by designing a Fourier Continuation-based neural network \href{https://symposium.foragerone.com/caltech-sfp-summer-seminar-day-2021/presentations/32348}{[presentation link]}}
+			\resitem{Generated PDE dataset with less than 0.0001\% error for the Darcy flow problem using FEniCS, a finite elements solver for Python}
+			% \resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
+		\end{itemize}
+
+	\ressubheading{Boston University Ludwig Lab}{Boston, MA}{Researcher}{Summer 2019 - Winter 2020}
+		\begin{itemize}[leftmargin=*]
+			% \resitem{Selected for Research in Science \& Engineering (RISE) Program}
+			% \resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
+			\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision of surface stress measurements by up to 30\%}
+			% \resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
+			% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
+		\end{itemize}
 
 \section{Projects}
 
-\begin{itemize}[leftmargin=*]
-	\item 
-		\ressubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}{Full-Stack Development}{June 2021 - Present}
-			\begin{itemize}[leftmargin=*]
-				\resitem{Web application for interpreting and analyzing personal Facebook data.}
-			\end{itemize}
+		% \ressubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}{Full-Stack Development}{June 2021 - Present}
+		% 	\begin{itemize}[leftmargin=*]
+		% 		\resitem{Web application built on Python/Django for statistical analysis of personal Facebook data.}
+		% 	\end{itemize}
 	
-	\item 
-		\ressubheading{Turtle Run Game}{C, SDL}{Software Development}{February 2021 - June 2021}
+		\ressubheading{Turtle Run \href{https://github.com/derekqin8/turtle-run}{[github]}}{C, SDL}{Software Development}{February 2021 - June 2021}
 			\begin{itemize}[leftmargin=*]
-				\item Developed physics engine and 2D side scrolling game with full GUI.
+				\resitem{Created vector-based physics engine in C and 2D side scrolling game with full GUI rendered with SDL}
 			\end{itemize}
-	\item
+
 		\ressubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}{Python}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
 			\begin{itemize}[leftmargin=*]
-				\resitem{Created a differential microscopic traffic model to model flow rate and jam dissipation for bilateral and vehicle unit control.}
+				\resitem{Created a differential microscopic traffic model to model flow rate and jam dissipation for bilateral and vehicle unit control, implemented and rendered in Python}
+				\resitem{Implemented vehicle control pattern that decreases jam duration by 12.2\% and increases flow rate by 18\%}
 				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
 			\end{itemize}
 	
-	\item
 		\ressubheading{Traffic Signal Control Simulation for Optimization of Vehicle Flow}{Python, Google Maps API}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
 			\begin{itemize}[leftmargin=*]
 				% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
-				\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time.}
+				\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time, Monte Carlo simulation in Python}
 				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
 			\end{itemize}
 
-	% \item
 	% 	\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
 	% 		\begin{itemize}
 	% 			\resitem{Selected for Research in Science \& Engineering (RISE) Program}
@@ -223,19 +208,23 @@
 	% 			\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
 	% 		\end{itemize}
 
-	% \item
 	% 	\ressubheading{\textbf{Fourier Continuation Neural Operator for Nonperiodic PDEs}}{Caltech, CA}{Computer Science \& Physics}{March 2021 - Present}
 	% 		\begin{itemize}[leftmargin=*]
 	% 			\resitem{Research conducted under Caltech SURF}
 	% 			\resitem{Designed and tested novel neural network architecture to improve performance of Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions}
 	% 			\resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
 	% 		\end{itemize}
-	
-\end{itemize}
 
-	
+% \vspace{0pt}
 
-% \section{Activities}
+\section{Leadership}
+
+	\ressubheading{Association for Young Scientists and Innovators \href{https://www.aysi.org}{[website]}}{Plano, Texas}{Vice President, Co-founder}{May 2019 - September 2020}
+		\begin{itemize}[leftmargin=*]
+			\resitem{Co-founded and led organization to mentor students in scientific research with over 400 members}
+			\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Machine Learning}
+%			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
+		\end{itemize}
 
 % \begin{itemize}[leftmargin=*]
 	% \item
@@ -271,14 +260,6 @@
 	%			\resitem{Led team to 3rd Place at Regional WorldQuest competition}
 	%			\resitem{Time Commitment: 1 hour/week, 18 weeks/year, 18 hours/year}
 	%		\end{itemize}
-
-	% \item
-	% 	\ressubheading{\textbf{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President, Co-founder}{May 2019 - September 2020}
-	% 		\begin{itemize}
-	% 			\resitem{Managed membership information and communication with over 200 science fair students}
-	% 			\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Artificial Intelligence}
-	% %			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
-	% 		\end{itemize}
 
 	%\item
 	%	\ressubheading{\textbf{Greater Dallas Youth Orchestra}}{Dallas, Texas}{Cellist}{May 2019 - Present}
@@ -322,12 +303,14 @@
 
 % \end{itemize}
 
+% \vspace{0pt}
+
 \section{Selected Awards}
 
 \begin{itemize}[leftmargin=*]
-	\myitem{USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
-	\myitem {Harvard-MIT Mathematics Tournament, Team Round, 10\textsuperscript{th} Place (2018)}
-	\myitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
+	\resitem{USA Physics Olympiad, Medalist (National Top 200 Individuals) (2019)}
+	\resitem {Harvard-MIT Mathematics Tournament, Top 10 Team (2018)}
+	\resitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
 	% \myitem {\textbf{Special Awards}}
 	% 	\begin{itemize}
 	% 		\mysubitem {USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
