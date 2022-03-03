@@ -25,7 +25,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{0.5in}
+\addtolength{\textheight}{1in}
 
 %-----------------------------------------------------------
 %Custom commands
@@ -39,16 +39,25 @@
 	\end{tabular*}
 	\vspace{-12pt}
 }
+\newcommand{\projsubheading}[2]{
+	\vspace{6pt}
+	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2
+	\end{tabular*}
+	\vspace{-18pt}
+}
 \newcommand{\edusubheading}[3]{
+	\vspace{6pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#3} \\
 	\end{tabular*}
-	\vspace{-16pt}}
+	\vspace{-20pt}
+	}
 \newcommand{\myitem}[1]{\item[--] #1 \vspace{-8pt}}
 \newcommand{\mysubitem}[1]{\item #1 \vspace{-4pt}}
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\Large
-}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+  	\vspace{-8pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-12pt}]
 %-----------------------------------------------------------
 % Turn on the style
 \pagestyle{fancy}
@@ -70,7 +79,7 @@
 \begin{center}
 	\textbf{\huge Derek Qin}\\
 	% 3745 Roundtree Way, Plano, TX, 75025\\
-	dqin@caltech.edu $|$ Phone: (972) 900-5736 $|$ Linkedin: in/dqin $|$ GitHub: derekqin8\\
+	dqin@caltech.edu $|$ Phone: (972) 900-5736 $|$ Linkedin: \href{https://www.linkedin.com/in/dqin}{in/dqin} $|$ GitHub: \href{https://www.github.com/derekqin8}{derekqin8}\\
 \end{center}
 
 \section{Education}
@@ -111,8 +120,8 @@
 
 \edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - June 2024 (Anticipated)}
 	\begin{itemize}[leftmargin=*]
-		\resitem{B.S. Major: Computer Science, Minor: Information and Data Sciences; \textbf{GPA:} 4.0}
-		\resitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Machine Learning, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra, Statistics}
+		\resitem{B.S. Major: Computer Science, Minor: Information and Data Sciences; \textbf{GPA:} 4.0/4.0}
+		\resitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Relational Databases, Data Mining, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra, Statistics}
 	\end{itemize}
 
 % \section{Selected Coursework}
@@ -142,10 +151,12 @@
 
 \section{Skills}
 
+\vspace{6pt}
 \begin{itemize}[leftmargin=*]
-	\resitem {\textbf{Programming Languages:} C, C++, Java, JavaScript, Python, SQL (intro), MATLAB, HTML/CSS, \LaTeX}
-	\resitem {\textbf{Tools:} PyTorch, TensorFlow, Keras, scikit-learn, Numpy, pandas, Git, FEniCS}
-	\resitem{\textbf{Frameworks:} React (intro), Django}
+	\resitem {\textbf{Programming Languages:} Python, C, C++, Java, JavaScript, MATLAB, \LaTeX}
+	\resitem {\textbf{Tools:} Git, Docker, AWS, FEniCS}
+	\resitem{\textbf{Development:} HTML/CSS, SQL, React, Django}
+	\resitem{\textbf{Machine Learning:} PyTorch, TensorFlow, Keras, scikit-learn, Numpy, pandas, Jupyter Notebooks}
 	% \myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
 	% \myitem {\textbf{Software}}
 	% 	\begin{itemize}
@@ -156,46 +167,46 @@
 
 \section{Experience}
 
-	\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Researcher}{Winter 2021 - Present}
+	\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Research Intern}{Winter 2021 - Present}
 		\begin{itemize}[leftmargin=*]
 			% \resitem{Research conducted under Caltech SURF}
-			\resitem{Improved Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions by up to 15\% by designing a Fourier Continuation-based neural network \href{https://symposium.foragerone.com/caltech-sfp-summer-seminar-day-2021/presentations/32348}{[presentation link]}}
+			\resitem{Improved Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions by up to 15\% by designing \href{https://symposium.foragerone.com/caltech-sfp-summer-seminar-day-2021/presentations/32348}{a Fourier Continuation-based neural network}, deployed using AWS}
 			\resitem{Generated PDE dataset with less than 0.0001\% error for the Darcy flow problem using FEniCS, a finite elements solver for Python}
 			% \resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
 		\end{itemize}
 
-	\ressubheading{Boston University Ludwig Lab}{Boston, MA}{Researcher}{Summer 2019 - Winter 2020}
+	\ressubheading{Boston University Ludwig X-Ray Diffraction Lab}{Boston, MA}{Research Software Engineer Intern}{Summer 2019 - Winter 2020}
 		\begin{itemize}[leftmargin=*]
 			% \resitem{Selected for Research in Science \& Engineering (RISE) Program}
 			% \resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
-			\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision of surface stress measurements by up to 30\%}
+			\resitem{Developed computer vision analysis software using to speed up Multibeam Optical Stress Sensor analysis and improve precision of surface stress measurements by up to 30\%}
 			% \resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
 			% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
 		\end{itemize}
 
 \section{Projects}
 
-		% \ressubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}{Full-Stack Development}{June 2021 - Present}
-		% 	\begin{itemize}[leftmargin=*]
-		% 		\resitem{Web application built on Python/Django for statistical analysis of personal Facebook data.}
-		% 	\end{itemize}
+		\projsubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}
+			\begin{itemize}[leftmargin=*]
+				\resitem{Web application built on Python/Django for statistical analysis, sentiment analysis, and NLP processing of personal Facebook data.}
+			\end{itemize}
 	
-		\ressubheading{Turtle Run \href{https://github.com/derekqin8/turtle-run}{[github]}}{C, SDL}{Software Development}{February 2021 - June 2021}
+		\projsubheading{\href{https://github.com/derekqin8/turtle-run}{Turtle Run Game}}{C, SDL}
 			\begin{itemize}[leftmargin=*]
 				\resitem{Created vector-based physics engine in C and 2D side scrolling game with full GUI rendered with SDL}
 			\end{itemize}
 
-		\ressubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}{Python}{Computer Science \& Applied Mathematics}{August 2018 - April 2019}
+		\projsubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}{Python}
 			\begin{itemize}[leftmargin=*]
-				\resitem{Created a differential microscopic traffic model to model flow rate and jam dissipation for bilateral and vehicle unit control, implemented and rendered in Python}
-				\resitem{Implemented vehicle control pattern that decreases jam duration by 12.2\% and increases flow rate by 18\%}
+				% \resitem{Designed and implemented vehicle control scheme to minimize phantom traffic jam dissipation time using bilateral and vehicle unit control}
+				\resitem{Designed and implemented autonomous vehicle control system that decreases phantom traffic jam duration by 12.2\% and increases vehicle flow rate by 18\%}
 				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
 			\end{itemize}
 	
-		\ressubheading{Traffic Signal Control Simulation for Optimization of Vehicle Flow}{Python, Google Maps API}{Computer Science \& Applied Mathematics}{August 2017 - March 2018}
+		\projsubheading{Smart Traffic Signal Controller}{Python, Google Maps API}
 			\begin{itemize}[leftmargin=*]
 				% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
-				\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time, Monte Carlo simulation in Python}
+				\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time, confirmed using implemented Monte Carlo simulation in Python}
 				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
 			\end{itemize}
 
@@ -219,9 +230,9 @@
 
 \section{Leadership}
 
-	\ressubheading{Association for Young Scientists and Innovators \href{https://www.aysi.org}{[website]}}{Plano, Texas}{Vice President, Co-founder}{May 2019 - September 2020}
+	\ressubheading{\href{https://www.aysi.org}{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President, Co-founder, Advisory Board}{May 2019 - Present}
 		\begin{itemize}[leftmargin=*]
-			\resitem{Co-founded and led organization to mentor students in scientific research with over 400 members}
+			\resitem{Co-founded and led a 501(c)(3) nonprofit to mentor students in scientific research with over 400 members}
 			\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Machine Learning}
 %			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
 		\end{itemize}
@@ -307,10 +318,13 @@
 
 \section{Selected Awards}
 
+\vspace{6pt}
+
 \begin{itemize}[leftmargin=*]
-	\resitem{USA Physics Olympiad, Medalist (National Top 200 Individuals) (2019)}
-	\resitem {Harvard-MIT Mathematics Tournament, Top 10 Team (2018)}
-	\resitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
+	\resitem{USA Physics Olympiad, Medalist (National Top 200 Individuals)}
+	% \resitem {Harvard-MIT Mathematics Tournament, Top 10 Team (2018)}
+	\resitem {5x American Invitational Mathematics Exam (AIME) Qualifier}
+	\resitem {8x American Mathematics Competition (AMC 10/12) Distinguished Honor Roll}
 	% \myitem {\textbf{Special Awards}}
 	% 	\begin{itemize}
 	% 		\mysubitem {USA Physics Olympiad, Honorable Mention (National Top 200 Individuals) (2019)}
