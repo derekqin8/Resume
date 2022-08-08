@@ -15,6 +15,8 @@
 \usepackage{enumitem}
 \usepackage[empty]{fullpage}
 \usepackage{color}
+\usepackage{enumitem}
+\setitemize{leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 %-----------------------------------------------------------
 \raggedbottom
 \raggedright
@@ -29,35 +31,38 @@
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item[--] #1 \vspace{-8pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resitem}[1]{\item[--] #1}
+\newcommand{\resheading}[1]{
+	{\large \colorbox{mygrey}{
+		\begin{minipage}
+			{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}
+		\end{minipage}
+		}
+	}
+}
 \newcommand{\ressubheading}[4]{
-	\vspace{6pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 			\textbf{#1} & #2 \\
 			\textit{#3} & \textit{#4}
 	\end{tabular*}
-	\vspace{-12pt}
 }
 \newcommand{\projsubheading}[2]{
-	\vspace{6pt}
+	% \vspace{6pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2
 	\end{tabular*}
-	\vspace{-18pt}
+	% \vspace{-18pt}
 }
 \newcommand{\edusubheading}[3]{
-	\vspace{6pt}
+	% \vspace{6pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#3} \\
 	\end{tabular*}
-	\vspace{-20pt}
+	% \vspace{-20pt}
 	}
-\newcommand{\myitem}[1]{\item[--] #1 \vspace{-8pt}}
-\newcommand{\mysubitem}[1]{\item #1 \vspace{-4pt}}
 \titleformat{\section}{
-  	\vspace{-8pt}\scshape\raggedright\Large
-}{}{0em}{}[\color{black}\titlerule \vspace{-12pt}]
+  	\vspace{-12pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 %-----------------------------------------------------------
 % Turn on the style
 \pagestyle{fancy}
@@ -104,7 +109,7 @@
 %					AP Human Geography (5)& AP CS Principles (5)& AP World History (5)\\
 %				\end{tabular}\vspace{-0pt}
 %		\end{itemize}
-	
+
 % 	\edusubheading{Plano West Senior High School (10\textsuperscript{th}-12\textsuperscript{th})}{Plano, Texas}{Aug 2018 - May 2020}
 % 		\begin{itemize}
 % 			\resitem{\begin{tabular}{p{2.5in} p{2.5in}}
@@ -119,10 +124,10 @@
 % 		\end{itemize}
 
 \edusubheading{California Institute of Technology}{Pasadena, California}{Sept 2020 - June 2024 (Anticipated)}
-	\begin{itemize}[leftmargin=*]
-		\resitem{B.S. Major: Computer Science, Minor: Information and Data Sciences; \textbf{GPA:} 4.0/4.0}
-		\resitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Relational Databases, Data Mining, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra, Statistics}
-	\end{itemize}
+\begin{itemize}[leftmargin=*]
+	\resitem{B.S. Major: Computer Science, Minor: Information and Data Sciences; \textbf{GPA:} 4.0/4.0}
+	\resitem{\textbf{Selected Coursework:} \textbf{CS:} Data Structures, Software Development, Computing Systems, Algorithms, Relational Databases, Data Mining, Learning Systems, Computer Vision; \textbf{Math:} Discrete Math, Linear Algebra, Statistics}
+\end{itemize}
 
 % \section{Selected Coursework}
 % 	\begin{itemize}
@@ -152,165 +157,187 @@
 \section{Skills}
 
 \vspace{6pt}
-\begin{itemize}[leftmargin=*]
-	\resitem {\textbf{Programming Languages:} Python, C, C++, Java, JavaScript, MATLAB, \LaTeX}
-	\resitem {\textbf{Tools:} Git, Docker, AWS, FEniCS}
-	\resitem{\textbf{Development:} HTML/CSS, SQL, React, Django}
-	\resitem{\textbf{Machine Learning:} PyTorch, TensorFlow, Keras, scikit-learn, Numpy, pandas, Jupyter Notebooks}
+\begin{itemize}
+	\resitem{
+		\textbf{Programming Languages:} Python, C, C++, Java, SQL, Rust,
+		JavaScript/TypeScript, MATLAB
+	}
+	\resitem{\textbf{Tools:} Git, Mercurial, Docker, AWS, FEniCS}
+	\resitem{\textbf{Development:} HTML/CSS, React, Angular, RxJS, Django}
+	\resitem{
+		\textbf{Machine Learning:} PyTorch, TensorFlow, Keras, scikit-learn,
+		Numpy, pandas, Jupyter Notebooks
+	}
 	% \myitem {\textbf{Languages:} Fluent in English and Mandarin Chinese}
 	% \myitem {\textbf{Software}}
 	% 	\begin{itemize}
 	% 		\mysubitem {Proficient with Microsoft Office, Adobe Premiere, LightWorks, and Google Docs}
 \end{itemize}
 
-% \vspace{0pt}
-
 \section{Experience}
+\ressubheading{Google}{Kirkland, WA}{Incoming Software Engineer Intern}
+{Summer 2022}
+\begin{itemize}
+	\resitem{
+		Developed data-driven usage warning API and UI for Google
+		Cloud Compute Engine.
+	}
+\end{itemize}
 
-	\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Research Intern}{Winter 2021 - Present}
-		\begin{itemize}[leftmargin=*]
-			% \resitem{Research conducted under Caltech SURF}
-			\resitem{Improved Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions by up to 15\% by designing \href{https://symposium.foragerone.com/caltech-sfp-summer-seminar-day-2021/presentations/32348}{a Fourier Continuation-based neural network}, deployed using AWS}
-			\resitem{Generated PDE dataset with less than 0.0001\% error for the Darcy flow problem using FEniCS, a finite elements solver for Python}
-			% \resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
-		\end{itemize}
+\ressubheading{San Capital Management}{Remote}{Software Engineer Intern}
+{Winter 2022 - Present}
+\begin{itemize}[leftmargin=*]
+	\resitem{
+		Built performant blockchain transaction parser and market making
+		platform for early stage trading startup
+	}
+\end{itemize}
 
-	\ressubheading{Boston University Ludwig X-Ray Diffraction Lab}{Boston, MA}{Research Software Engineer Intern}{Summer 2019 - Winter 2020}
-		\begin{itemize}[leftmargin=*]
-			% \resitem{Selected for Research in Science \& Engineering (RISE) Program}
-			% \resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
-			\resitem{Developed computer vision analysis software using to speed up Multibeam Optical Stress Sensor analysis and improve precision of surface stress measurements by up to 30\%}
-			% \resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
-			% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
-		\end{itemize}
+\ressubheading{Caltech Tensor Lab}{Pasadena, CA}{Machine Learning Research Intern}{Winter 2021 - Present}
+\begin{itemize}[leftmargin=*]
+	% \resitem{Research conducted under Caltech SURF}
+	\resitem{Improved Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions by up to 15\% by designing \href{https://symposium.foragerone.com/caltech-sfp-summer-seminar-day-2021/presentations/32348}{a Fourier Continuation-based deep neural network}, deployed using AWS}
+	% \resitem{Generated PDE dataset with less than 0.0001\% error for the Darcy flow problem using FEniCS, a finite elements solver for Python}
+	% \resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
+\end{itemize}
+
+% \ressubheading{Boston University Ludwig X-Ray Diffraction Lab}{Boston, MA}{Research Software Engineer Intern}{Summer 2019 - Winter 2020}
+% 	\begin{itemize}[leftmargin=*]
+% 		% \resitem{Selected for Research in Science \& Engineering (RISE) Program}
+% 		% \resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
+% 		\resitem{Developed computer vision analysis software using to speed up Multibeam Optical Stress Sensor analysis and improve precision of surface stress measurements by up to 30\%}
+% 		% \resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
+% 		% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
+% 	\end{itemize}
 
 \section{Projects}
 
-		\projsubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}
-			\begin{itemize}[leftmargin=*]
-				\resitem{Web application built on Python/Django for statistical analysis, sentiment analysis, and NLP processing of personal Facebook data.}
-			\end{itemize}
-	
-		\projsubheading{\href{https://github.com/derekqin8/turtle-run}{Turtle Run Game}}{C, SDL}
-			\begin{itemize}[leftmargin=*]
-				\resitem{Created vector-based physics engine in C and 2D side scrolling game with full GUI rendered with SDL}
-			\end{itemize}
+% \projsubheading{Facebook Data Analyzer}{Python, Pandas, Django, Heroku}
+% 	\begin{itemize}[leftmargin=*]
+% 		\resitem{Web application built on Python/Django for statistical analysis, sentiment analysis, and NLP processing of personal Facebook data.}
+% 	\end{itemize}
 
-		\projsubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}{Python}
-			\begin{itemize}[leftmargin=*]
-				% \resitem{Designed and implemented vehicle control scheme to minimize phantom traffic jam dissipation time using bilateral and vehicle unit control}
-				\resitem{Designed and implemented autonomous vehicle control system that decreases phantom traffic jam duration by 12.2\% and increases vehicle flow rate by 18\%}
-				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
-			\end{itemize}
-	
-		\projsubheading{Smart Traffic Signal Controller}{Python, Google Maps API}
-			\begin{itemize}[leftmargin=*]
-				% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
-				\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time, confirmed using implemented Monte Carlo simulation in Python}
-				% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
-			\end{itemize}
+\projsubheading{\href{https://github.com/derekqin8/turtle-run}{Turtle Run Game}}{C, SDL}
+\begin{itemize}[leftmargin=*]
+	\resitem{Created vector-based physics engine in C and 2D side scrolling game with full GUI rendered with SDL}
+\end{itemize}
 
-	% 	\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
-	% 		\begin{itemize}
-	% 			\resitem{Selected for Research in Science \& Engineering (RISE) Program}
-	% 			\resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
-	% 			\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision}
-	% 			\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
-	% 			\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
-	% 		\end{itemize}
+\projsubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}{Python}
+\begin{itemize}[leftmargin=*]
+	% \resitem{Designed and implemented vehicle control scheme to minimize phantom traffic jam dissipation time using bilateral and vehicle unit control}
+	\resitem{Designed and implemented autonomous vehicle control system that decreases phantom traffic jam duration by 12.2\% and increases vehicle flow rate by 18\%}
+	% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
+\end{itemize}
 
-	% 	\ressubheading{\textbf{Fourier Continuation Neural Operator for Nonperiodic PDEs}}{Caltech, CA}{Computer Science \& Physics}{March 2021 - Present}
-	% 		\begin{itemize}[leftmargin=*]
-	% 			\resitem{Research conducted under Caltech SURF}
-	% 			\resitem{Designed and tested novel neural network architecture to improve performance of Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions}
-	% 			\resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
-	% 		\end{itemize}
+\projsubheading{Smart Traffic Signal Controller}{Python, Google Maps API}
+\begin{itemize}[leftmargin=*]
+	% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
+	\resitem{Developed signal management algorithm resulting in 18\% average decrease in wait time, confirmed using implemented Monte Carlo simulation in Python}
+	% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
+\end{itemize}
+
+% 	\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
+% 		\begin{itemize}
+% 			\resitem{Selected for Research in Science \& Engineering (RISE) Program}
+% 			\resitem{Analyzed self-organizing patterns on Si in ultra-high vacuum bombarded by Ar\textsuperscript{+} using AFM imaging.}
+% 			\resitem{Developed computer vision analysis software using to speed up MOSS analysis and improve precision}
+% 			\resitem{\textit{Mentors: Prof. Karl Ludwig, Peco Myint}}
+% 			\resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Physics, DRSEF; TXSEF Finalist; ONR Special Award; AFRL Special Award}
+% 		\end{itemize}
+
+% 	\ressubheading{\textbf{Fourier Continuation Neural Operator for Nonperiodic PDEs}}{Caltech, CA}{Computer Science \& Physics}{March 2021 - Present}
+% 		\begin{itemize}[leftmargin=*]
+% 			\resitem{Research conducted under Caltech SURF}
+% 			\resitem{Designed and tested novel neural network architecture to improve performance of Fourier Neural Operator performance on PDEs with nonperiodic boundary conditions}
+% 			\resitem{\textit{Mentors: Prof. Anima Anandkumar, Zongyi Li}}
+% 		\end{itemize}
 
 % \vspace{0pt}
 
-\section{Leadership}
+\section{Leadership and Teaching}
+\ressubheading{Caltech CS 38/138 Algorithms}{Pasadena, CA}{Teaching Assistant}{Spring 2022}
 
-	\ressubheading{\href{https://www.aysi.org}{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President, Co-founder, Advisory Board}{May 2019 - Present}
-		\begin{itemize}[leftmargin=*]
-			\resitem{Co-founded and led a 501(c)(3) nonprofit to mentor students in scientific research with over 400 members}
-			\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Machine Learning}
-%			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
-		\end{itemize}
+\ressubheading{\href{https://www.aysi.org}{Association for Young Scientists and Innovators}}{Plano, Texas}{Vice President, Co-founder, Advisory Board}{May 2019 - Present}
+\begin{itemize}[leftmargin=*]
+	\resitem{Co-founded and led a 501(c)(3) nonprofit to mentor students in scientific research with over 400 members}
+	\resitem{Organized AYSI Summer Coding Institute, which taught over 300 middle and high school students essential skills in MIT App Inventor and Machine Learning}
+	%			\resitem{Time Commitment: 1 hour/week, 36 weeks/year, 36 hours/year}
+\end{itemize}
 
 % \begin{itemize}[leftmargin=*]
-	% \item
-	% 	\ressubheading{\textbf{QuizBowl}, Plano West Senior High}{Plano, Texas}{Co-Captain, Co-President}{Aug 2018 - May 2020}
-	% 		\begin{itemize}
-	% 			\resitem{Led team to NAQT HSNCT and NAC Championship Finals in first year of QuizBowl}
-	% %			\resitem{Time Commitment: 3 hours/week, 36 weeks/year, 108 hours/year}
-	% 		\end{itemize}
+% \item
+% 	\ressubheading{\textbf{QuizBowl}, Plano West Senior High}{Plano, Texas}{Co-Captain, Co-President}{Aug 2018 - May 2020}
+% 		\begin{itemize}
+% 			\resitem{Led team to NAQT HSNCT and NAC Championship Finals in first year of QuizBowl}
+% %			\resitem{Time Commitment: 3 hours/week, 36 weeks/year, 108 hours/year}
+% 		\end{itemize}
 
-	%\item
-	%	\ressubheading{\textbf{Intellichoice}, Jasper High School; Plano West Senior High}{Dallas, Texas}{Chapter Founder, President}{Jan 2016 - Present}
-	%		\begin{itemize}
-	%			\resitem{4 years of volunteer work at Ethiopian Orthodox Tewahedo Debre Mehret Saint Michael Cathedral}
-	%			\resitem{Founded Jasper High School Chapter}
-	%			\resitem{Recruited new members and expanded volunteer group from 2 to 15 for Ethiopian Branch}
-	%			\resitem{Organized math tutoring for a pool of 100-150 students}
-	%			\resitem{Time Commitment: 3 hours/week, 10 weeks/year, 30 hours/year}
-	%		\end{itemize}
+%\item
+%	\ressubheading{\textbf{Intellichoice}, Jasper High School; Plano West Senior High}{Dallas, Texas}{Chapter Founder, President}{Jan 2016 - Present}
+%		\begin{itemize}
+%			\resitem{4 years of volunteer work at Ethiopian Orthodox Tewahedo Debre Mehret Saint Michael Cathedral}
+%			\resitem{Founded Jasper High School Chapter}
+%			\resitem{Recruited new members and expanded volunteer group from 2 to 15 for Ethiopian Branch}
+%			\resitem{Organized math tutoring for a pool of 100-150 students}
+%			\resitem{Time Commitment: 3 hours/week, 10 weeks/year, 30 hours/year}
+%		\end{itemize}
 
-	%\item
-	%	\ressubheading{\textbf{Think and Speak Up (TSUP) Summer Camp}}{Beijing, China}{Teaching Assistant}{July 2018 - Aug 2018}
-	%		\begin{itemize}
-	%			\resitem{Teacher of 10 student classes of young Chinese middle school students}
-	%			\resitem{Taught students to combat severe stage fright and develop confidence in speech delivery}
-	%			\resitem{Introduced new perspectives by merging aspects of American and Chinese education systems}
-	%			\resitem{Time Commitment: 40 hours/week, 2 weeks/year, 80 hours/year}
-	%		\end{itemize}
+%\item
+%	\ressubheading{\textbf{Think and Speak Up (TSUP) Summer Camp}}{Beijing, China}{Teaching Assistant}{July 2018 - Aug 2018}
+%		\begin{itemize}
+%			\resitem{Teacher of 10 student classes of young Chinese middle school students}
+%			\resitem{Taught students to combat severe stage fright and develop confidence in speech delivery}
+%			\resitem{Introduced new perspectives by merging aspects of American and Chinese education systems}
+%			\resitem{Time Commitment: 40 hours/week, 2 weeks/year, 80 hours/year}
+%		\end{itemize}
 
-	%\item
-	%	\ressubheading{\textbf{Junior World Affairs Council}, Plano West Senior High School}{Plano, Texas}{Junior President, President}{Aug 2018 - Present}
-	%		\begin{itemize}
-	%			\resitem{Organized service project supporting Plano area charities}
-	%			\resitem{Led team to 3rd Place at Regional WorldQuest competition}
-	%			\resitem{Time Commitment: 1 hour/week, 18 weeks/year, 18 hours/year}
-	%		\end{itemize}
+%\item
+%	\ressubheading{\textbf{Junior World Affairs Council}, Plano West Senior High School}{Plano, Texas}{Junior President, President}{Aug 2018 - Present}
+%		\begin{itemize}
+%			\resitem{Organized service project supporting Plano area charities}
+%			\resitem{Led team to 3rd Place at Regional WorldQuest competition}
+%			\resitem{Time Commitment: 1 hour/week, 18 weeks/year, 18 hours/year}
+%		\end{itemize}
 
-	%\item
-	%	\ressubheading{\textbf{Greater Dallas Youth Orchestra}}{Dallas, Texas}{Cellist}{May 2019 - Present}
-	%		\begin{itemize}
-	%			\resitem{Selected for membership in the Dallas Fort-worth area's most prestigious youth orchestra}
-	%			\resitem{Performed concerts at Morton H. Meyerson Symphony Center in Dallas}
-	%			\resitem{Time Commitment: 5 hours/week, 34 weeks/year, 170 hours/year}
-	%		\end{itemize}
+%\item
+%	\ressubheading{\textbf{Greater Dallas Youth Orchestra}}{Dallas, Texas}{Cellist}{May 2019 - Present}
+%		\begin{itemize}
+%			\resitem{Selected for membership in the Dallas Fort-worth area's most prestigious youth orchestra}
+%			\resitem{Performed concerts at Morton H. Meyerson Symphony Center in Dallas}
+%			\resitem{Time Commitment: 5 hours/week, 34 weeks/year, 170 hours/year}
+%		\end{itemize}
 
-	% \item
-	% 	\ressubheading{\textbf{AwesomeMath Summer Program}}{University of Texas at Dallas}{Student}{2015, 2016}
-	% 		\begin{itemize}
-	% 			\resitem{Studied Advanced Graph Theory, Combinatorial Geometry, Posets, Analysis}
-	% %			\resitem{Time Commitment: 45 hour/week, 3 weeks/year, 120 hours/year}
-	% 		\end{itemize}
+% \item
+% 	\ressubheading{\textbf{AwesomeMath Summer Program}}{University of Texas at Dallas}{Student}{2015, 2016}
+% 		\begin{itemize}
+% 			\resitem{Studied Advanced Graph Theory, Combinatorial Geometry, Posets, Analysis}
+% %			\resitem{Time Commitment: 45 hour/week, 3 weeks/year, 120 hours/year}
+% 		\end{itemize}
 
-	%\item
-	%	\ressubheading{\textbf{Dallas Youth Volunteer Association}}{Plano, Texas}{General Volunteer, Event Manager}{August 2018 - Present}
-	%		\begin{itemize}
-	%			\resitem{Organized and managed North Texas Chinese Speech competition}
-	%			\resitem{Partnered with Intellichoice to provide more volunteer opportunities}
-	%			\resitem{Time Commitment: 8 hour/week, 2 weeks/year, 16 hours/year}
-	%		\end{itemize}
+%\item
+%	\ressubheading{\textbf{Dallas Youth Volunteer Association}}{Plano, Texas}{General Volunteer, Event Manager}{August 2018 - Present}
+%		\begin{itemize}
+%			\resitem{Organized and managed North Texas Chinese Speech competition}
+%			\resitem{Partnered with Intellichoice to provide more volunteer opportunities}
+%			\resitem{Time Commitment: 8 hour/week, 2 weeks/year, 16 hours/year}
+%		\end{itemize}
 
-	%\item
-	%	\ressubheading{\textbf{Plano Teen Harmony}}{Plano, Texas}{Cellist}{Aug 2015 - Present}
-	%		\begin{itemize}
-	%			\resitem{Performed classical and contemporary orchestra music in numerous senior homes}
-	%			\resitem{Time Commitment: 5 hour/week, 4 weeks/year, 20 hours/year}
-	%		\end{itemize}
+%\item
+%	\ressubheading{\textbf{Plano Teen Harmony}}{Plano, Texas}{Cellist}{Aug 2015 - Present}
+%		\begin{itemize}
+%			\resitem{Performed classical and contemporary orchestra music in numerous senior homes}
+%			\resitem{Time Commitment: 5 hour/week, 4 weeks/year, 20 hours/year}
+%		\end{itemize}
 
-	%\item
-	%	\ressubheading{Dancing for a Cause}{Plano, Texas}{Member}{August 2017 - May 2018}
-	%		\begin{itemize}
-	%			\resitem{Time Commitment:}
-	%				\begin{tabular}{p{2.5in} p{2.5in} p{2.5in}}
-	%					Weeks: 10 & Hours per Week: 3 & Total hours: 30 \\
-	%				\end{tabular}
-	%			\resitem{Learned breakdancing; performed at UT Dallas charity event}
-	%		\end{itemize}
+%\item
+%	\ressubheading{Dancing for a Cause}{Plano, Texas}{Member}{August 2017 - May 2018}
+%		\begin{itemize}
+%			\resitem{Time Commitment:}
+%				\begin{tabular}{p{2.5in} p{2.5in} p{2.5in}}
+%					Weeks: 10 & Hours per Week: 3 & Total hours: 30 \\
+%				\end{tabular}
+%			\resitem{Learned breakdancing; performed at UT Dallas charity event}
+%		\end{itemize}
 
 % \end{itemize}
 
@@ -333,14 +360,14 @@
 	% 		% \mysubitem {Duke TIP William and Dorothy C. Bevan Scholarship (2014)}
 	% 		% \mysubitem {National AP Scholar, AP Scholar with Distinction (2019)}
 	% 	\end{itemize} \vspace{-9pt}
-		
+
 	% \myitem {\textbf{Mathematics Awards}}
 	% 	\begin{itemize}
 	% 		\mysubitem {Harvard-MIT Mathematics Tournament, Team Round, 10\textsuperscript{th} Place (2018)}
 	% 		\mysubitem {5x American Invitational Mathematics Exam (AIME) Qualifier (2015, 2016, 2017, 2018, 2019)}
 	% 		% \mysubitem {8x American Mathematics Competition (AMC 10) Distinguished Honor Roll (2014-2018)}
 	% 	\end{itemize} \vspace{-9pt}
-			
+
 	%		\myitem {\textbf{Music and Arts Awards}}
 	%			\begin{itemize}
 	%				\mysubitem {All-Region Symphony Orchestra Member (3\textsuperscript{rd} Chair out of 106 candidates) (2019)}
