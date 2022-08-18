@@ -16,7 +16,7 @@
 \usepackage[empty]{fullpage}
 \usepackage{color}
 \usepackage{enumitem}
-\setitemize{leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setitemize{leftmargin=*,noitemsep,topsep=3pt,parsep=0pt,partopsep=0pt}
 %-----------------------------------------------------------
 \raggedbottom
 \raggedright
@@ -41,20 +41,21 @@
 	}
 }
 \newcommand{\ressubheading}[4]{
+	\vspace{3pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 			\textbf{#1} & #2 \\
 			\textit{#3} & \textit{#4}
 	\end{tabular*}
 }
 \newcommand{\projsubheading}[2]{
-	% \vspace{6pt}
+	\vspace{3pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2
 	\end{tabular*}
 	% \vspace{-18pt}
 }
 \newcommand{\edusubheading}[3]{
-	% \vspace{6pt}
+	\vspace{3pt}
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1}, #2 & \textit{#3} \\
 	\end{tabular*}
@@ -126,7 +127,7 @@
 
 \edusubheading{California Institute of Technology}
 			  {Pasadena, California}
-			  {Sept 2020 - June 2024 (Anticipated)}
+			  {Sept 2020 - June 2024}
 \begin{itemize}
 	\resitem{
 		B.S. Major: Computer Science,
@@ -138,6 +139,7 @@
 			\textbf{CS:}
 				Data Structures,
 				Software Development,
+				Functional Programming,	
 				Computing Systems,
 				Algorithms,
 				Relational Databases,
@@ -147,7 +149,10 @@
 			\textbf{Math:}
 				Discrete Math,
 				Linear Algebra,
-				Statistics
+				Statistics,
+				Probability Models,
+				Statistical Inference,
+				Bayesian Statistics
 	}
 \end{itemize}
 
@@ -231,9 +236,17 @@
 			  {Software Engineer Intern}
 			  {Summer 2022}
 \begin{itemize}
+	% \resitem{
+	% 	Developed data-driven usage warning API and UI for Google Cloud Compute 
+	% 	Engine.
+	% }
 	\resitem{
-		Developed data-driven usage warning API and UI for Google Cloud Compute 
-		Engine.
+		Added RPC to Coliseum to poll Cloud Monitoring metrics for global
+		DNS usage by Compute Engine VM instances
+	}
+	\resitem{
+		Created banner in Pantheon's instance list page with informative design
+		for smooth migration to zonal DNS
 	}
 \end{itemize}
 
@@ -279,14 +292,14 @@
 % 		\resitem{Web application built on Python/Django for statistical analysis, sentiment analysis, and NLP processing of personal Facebook data.}
 % 	\end{itemize}
 
-\projsubheading{\href{https://github.com/derekqin8/turtle-run}{Turtle Run Game}}
-			   {C, SDL}
-\begin{itemize}
-	\resitem{
-		Created vector-based physics engine in C and 2D side scrolling game with
-		full GUI rendered with SDL
-	}
-\end{itemize}
+% \projsubheading{\href{https://github.com/derekqin8/turtle-run}{Turtle Run Game}}
+% 			   {C, SDL}
+% \begin{itemize}
+% 	\resitem{
+% 		Created vector-based physics engine in C and 2D side scrolling game with
+% 		full GUI rendered with SDL
+% 	}
+% \end{itemize}
 
 \projsubheading{Phantom Traffic Jam Alleviation Using Networked Autonomous Cars}
 			   {Python}
@@ -300,17 +313,17 @@
 	% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Mathematics, DRSEF; TXSEF Finalist; Mu Alpha Theta Special Award}
 \end{itemize}
 
-\projsubheading{Smart Traffic Signal Controller}
-			   {Python, Google Maps API}
-\begin{itemize}
-	% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
-	\resitem{
-		Developed signal management algorithm resulting in 18\% average
-		decrease in wait time, confirmed using implemented Monte Carlo
-		simulation in Python
-	}
-	% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
-\end{itemize}
+% \projsubheading{Smart Traffic Signal Controller}
+% 			   {Python, Google Maps API}
+% \begin{itemize}
+% 	% \resitem{Developed a novel signal management algorithm and software tool using Python and Google Maps API, tested on both non-actuated and semi-actuated intersections (18\% decrease in wait times)}
+% 	\resitem{
+% 		Developed signal management algorithm resulting in 18\% average
+% 		decrease in wait time, confirmed using implemented Monte Carlo
+% 		simulation in Python
+% 	}
+% 	% \resitem{\textbf{Awards:} \textbf{1\textsuperscript{st} Prize} in Engineering, DRSEF; TXSEF Finalist; \textbf{3\textsuperscript{rd}} Prize Terracon Consultants; ONR Special Award; AFRL Special Award}
+% \end{itemize}
 
 % 	\ressubheading{\textbf{Surface Stress Development During Nanopatterning}}{Boston University, MA}{Materials Science, Computer Science, \& Physics}{June 2019 - Present}
 % 		\begin{itemize}
